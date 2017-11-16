@@ -7,10 +7,17 @@ public class FoodItem {
 	int cooking_time; // in minutes
 	String typeOfFood;
     SimpleDateFormat expirationDate = new SimpleDateFormat("yyyy-MM-dd");
+    Double heat_capacity;
     //TODO: Connection to recipes
 	
 
-    public String getName() {
+    public Double getHeat_capacity() {
+		return heat_capacity;
+	}
+	public void setHeat_capacity(Double heat_capacity) {
+		this.heat_capacity = heat_capacity;
+	}
+	public String getName() {
 		return name;
 	}
 	public void setName(String name) {
