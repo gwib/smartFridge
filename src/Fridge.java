@@ -8,7 +8,18 @@ public class Fridge {
 	Double outside_temp;
 	int num_shelves;
 	
+	public void addFoodItem(FoodItem foodItem) {
+		food.add(foodItem);
+		System.out.println(foodItem+" added to fridge!");
+	}
 	
+	public void removeFoodItem(FoodItem foodItem) {
+		food.remove(foodItem);
+		System.out.println(foodItem+" removed!!");
+	}
+	
+	
+	// getters and setters
 	public ArrayList<Double> getShelf_temp() {
 		return shelf_temp;
 	}
@@ -29,16 +40,6 @@ public class Fridge {
 		this.food = food;
 	}
 
-	public void addFoodItem(FoodItem foodItem) {
-		food.add(foodItem);
-		System.out.println(foodItem+" added to fridge!");
-	}
-	
-	public void removeFoodItem(FoodItem foodItem) {
-		food.remove(foodItem);
-		System.out.println(foodItem+" removed!!");
-	}
-	
 	public ArrayList<FoodItem> getFood() {
 		return food;
 	}
