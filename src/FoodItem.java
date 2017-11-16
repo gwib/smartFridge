@@ -5,17 +5,46 @@ public class FoodItem {
 	int quantity;
 	Double weight;
 	int cooking_time; // in minutes
-	String typeOfFood;
     SimpleDateFormat expirationDate = new SimpleDateFormat("yyyy-MM-dd");
     Double heat_capacity;
     //TODO: Connection to recipes
+    
+    // Constructor for countable food items
+    public FoodItem(String name, int quantity, SimpleDateFormat expirationDate) {
+    	this.name = name;
+    	this.quantity = quantity;
+    	this.expirationDate = expirationDate;
+    	//TODO: get weight of item 
+    	//this.heat_capacity = calculateHeatCapacityPerUnit();
+    }
+    
+    public FoodItem(String name, Double weight, SimpleDateFormat expirationDate) {
+    	this.name = name;
+    	this.weight = weight;
+    	this.expirationDate = expirationDate;
+    	this.heat_capacity = calculateHeatCapacityPerWeight();
+    }
+    
+    private Double calculateHeatCapacityPerWeight() {
+		// TODO get height capacity from DB, calculate it for specific weight
+		return null;
+	}
+
+	public Double calculateHeatCapacityPerUnit() {
+    	//TODO: calculate heat capacity
+    	return null;
+    }
 	
+    public void removeQuantityFromItem(int quantityRemoved) {
+    	this.quantity = this.getQuantity() - quantityRemoved;
+    }
+    
+    public void removeWeightFromItem(Double weightRemoved) {
+    	this.weight = this.getWeight() - weightRemoved;
+    }
 
     public Double getHeat_capacity() {
 		return heat_capacity;
-	}
-	public void setHeat_capacity(Double heat_capacity) {
-		this.heat_capacity = heat_capacity;
 	}
 	public String getName() {
 		return name;
