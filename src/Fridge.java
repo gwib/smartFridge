@@ -8,6 +8,9 @@ public class Fridge {
 	ArrayList<Double> shelf_weights;
 	Double outside_temp;
 	int num_shelves;
+	ArrayList<Double> shelf_humidity;
+	// temperature setpoints
+	
 	
 	public void addFoodItem(FoodItem foodItem) {
 		food.add(foodItem);
@@ -19,8 +22,24 @@ public class Fridge {
 		System.out.println(foodItem+" removed!!");
 	}
 	
+	// update setpoints according to rules
 	
 	// getters and setters
+	public ArrayList<Double> getShelf_weights() {
+		return shelf_weights;
+	}
+
+	public void setShelf_weights(ArrayList<Double> shelf_weights) {
+		this.shelf_weights = shelf_weights;
+	}
+
+	public ArrayList<Double> getShelf_humidity() {
+		return shelf_humidity;
+	}
+
+	public void setShelf_humidity(ArrayList<Double> shelf_humidity) {
+		this.shelf_humidity = shelf_humidity;
+	}
 	public ArrayList<Double> getShelf_temp() {
 		return shelf_temp;
 	}

@@ -14,8 +14,6 @@ public class Recipe {
 		this.description = d;
 	}
 	
-	//TODO: read recipes from csv and add these recipes to recipebase
-	
 	public String getName() {
 		return name;
 	}
