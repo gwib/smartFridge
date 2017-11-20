@@ -70,12 +70,7 @@ public class FoodItem {
 	public void setCooking_time(int cooking_time) {
 		this.cooking_time = cooking_time;
 	}
-	public String getTypeOfFood() {
-		return typeOfFood;
-	}
-	public void setTypeOfFood(String typeOfFood) {
-		this.typeOfFood = typeOfFood;
-	}
+	
 	public SimpleDateFormat getExpirationDate() {
 		return expirationDate;
 	}
