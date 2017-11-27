@@ -72,7 +72,7 @@ public class readFoodcsv {
 						s += f.getName() + ", " + String.valueOf(f.getQuantity()) + "\n";
 					}
 				}
-				System.out.println(s);
+				System.out.println(s); // Print out the arrayList of foodItems
 			
 				
 	}
