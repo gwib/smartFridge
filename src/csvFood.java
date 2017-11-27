@@ -10,15 +10,20 @@ import java.util.Scanner;
 public class csvFood {
 
 	
-	static String fileName="food.csv";
+	private static String fileName="food.csv";
+	private static List<FoodItem> foodList = new ArrayList<>();
 	
 	
 	public static void main(String[] args) throws IOException{
+		// Read the CSV file:
+		readCsv();
 		
-
-		 //FoodItem food1= new FoodItem("Watermelon",1,"2017-11-28");
-		 //writeCsvFile(food1);
-		      
+		//Write to the CSV file:
+		
+		//FoodItem food1= new FoodItem("Watermelon",1,"2017-11-28");
+		//writeCsvFile(food1);
+	}
+    public static void readCsv() throws IOException {
 		        // open file input stream
 				BufferedReader reader = new BufferedReader(new FileReader(fileName));
 				reader.readLine();
@@ -27,7 +32,7 @@ public class csvFood {
 				String line = null;
 				Scanner scanner = null;
 				int index = 0;
-				List<FoodItem> foodList = new ArrayList<>();
+				
 				
 				while ((line = reader.readLine()) != null) {
 					
@@ -81,7 +86,7 @@ public class csvFood {
 					}
 				}
 				System.out.println(s); // Print out the arrayList of foodItems
-			
+				
 	}
 
 	
@@ -93,9 +98,10 @@ public class csvFood {
 		    private static final String FILE_HEADER = "name,quantity_weight,expiration_date,unit";
 
 		    FoodItem food1= new FoodItem("Watermelon",1,"2017-11-28");
+		    
+		    
 		    public static void writeCsvFile(FoodItem f) {
 		      
-		    List<FoodItem> foodList = new ArrayList<>();
 		    
 		    foodList.add(f);
 	    	
@@ -113,7 +119,12 @@ public class csvFood {
 		    		for(FoodItem f1: foodList) {
 		    			 fileWriter.append(f1.getName());
 		    			 fileWriter.append(SEMICOLON_DELIMITER);
-		    			 fileWriter.append(Integer.toString(f1.getQuantity()));
+		    			 if(f1.getQuantity() == 0) {
+		    				 fileWriter.append(Double.toString(f1.getWeight()));
+		    			 }
+		    			 else {
+		    				 fileWriter.append(Integer.toString(f1.getQuantity()));
+		    			 }
 		    			 fileWriter.append(SEMICOLON_DELIMITER);
 		    			 fileWriter.append(f1.getExpirationDate());
 		    			 fileWriter.append(SEMICOLON_DELIMITER);
