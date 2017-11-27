@@ -1,6 +1,7 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -32,18 +33,18 @@ public class readFoodcsv {
 					while (scanner.hasNext()) {
 						String data = scanner.next();
 						if (index == 0) {
-							//food.setName(data);
+							
 							name = data;
 						}
 						else if (index == 1) {
 							try {
-								//food.setQuantity(Integer.parseInt(data));
 								quantity = Integer.parseInt(data);
 							}catch(NumberFormatException e) {
-								System.out.println("Double!!!");
-								//food.setWeight(Double.parseDouble(data));
 								weight = Double.parseDouble(data);
 							}
+						}
+						else if(index==2) {
+							expirationDate=data;
 						}
 						else
 							System.out.println("invalid data::" + data);
@@ -53,10 +54,10 @@ public class readFoodcsv {
 					index = 0;
 					//foodList.add(food);
 					if(quantity == 0) {
-						foodList.add(new FoodItem(name,weight,null));
+						foodList.add(new FoodItem(name,weight, expirationDate));
 					}
 					else {
-						foodList.add(new FoodItem(name, quantity, null));
+						foodList.add(new FoodItem(name, quantity, expirationDate));
 					}
 				
 				}
@@ -66,10 +67,10 @@ public class readFoodcsv {
 				String s = "";
 				for(FoodItem f: foodList) {
 					if(f.getQuantity() == 0) {
-						s += f.getName() + ", " + String.valueOf(f.getWeight()) + "\n";
+						s += f.getName() + ", " + String.valueOf(f.getWeight())  +", "+ f.getExpirationDate()+ "\n";
 					}
 					else {
-						s += f.getName() + ", " + String.valueOf(f.getQuantity()) + "\n";
+						s += f.getName() + ", " + String.valueOf(f.getQuantity()) +", "+ f.getExpirationDate() +"\n";
 					}
 				}
 				System.out.println(s); // Print out the arrayList of foodItems

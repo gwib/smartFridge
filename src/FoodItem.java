@@ -5,18 +5,18 @@ public class FoodItem {
 	int quantity;
 	Double weight;
 	int cooking_time; // in minutes
-    SimpleDateFormat expirationDate = new SimpleDateFormat("yyyy-MM-dd");
+    String expirationDate = null;
     //TODO: Connection to recipes
     
     // Constructor for countable food items
-    public FoodItem(String name, int quantity, SimpleDateFormat expirationDate) {
+    public FoodItem(String name, int quantity, String expirationDate) {
     	this.name = name;
     	this.quantity = quantity;
     	this.weight = 0.0;
     	this.expirationDate = expirationDate;
     }
     
-    public FoodItem(String name, Double weight, SimpleDateFormat expirationDate) {
+    public FoodItem(String name, Double weight, String expirationDate) {
     	this.name = name;
     	this.quantity = 0;
     	this.weight = weight;
@@ -57,10 +57,10 @@ public class FoodItem {
 	public void setCooking_time(int cooking_time) {
 		this.cooking_time = cooking_time;
 	}
-	public SimpleDateFormat getExpirationDate() {
+	public String getExpirationDate() {
 		return expirationDate;
 	}
-	public void setExpirationDate(SimpleDateFormat expirationDate) {
+	public void setExpirationDate(String expirationDate) {
 		this.expirationDate = expirationDate;
 	}
 	
