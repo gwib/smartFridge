@@ -5,7 +5,6 @@ public class Fridge {
 	Double motor_velocity;
 	Double cooling_liquid;
 	ArrayList<Double> shelf_temp;
-	ArrayList<Double> shelf_weights;
 	Double outside_temp;
 	int num_shelves;
 	ArrayList<Double> shelf_humidity;
@@ -25,13 +24,6 @@ public class Fridge {
 	// update setpoints according to rules
 	
 	// getters and setters
-	public ArrayList<Double> getShelf_weights() {
-		return shelf_weights;
-	}
-
-	public void setShelf_weights(ArrayList<Double> shelf_weights) {
-		this.shelf_weights = shelf_weights;
-	}
 
 	public ArrayList<Double> getShelf_humidity() {
 		return shelf_humidity;
