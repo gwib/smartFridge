@@ -1,0 +1,14 @@
+name;quantity_weight;expiration_date,unit
+milk;1;2017.11.30;NaN
+egg;10;2017.12.03;NaN
+cheese;200;2017.11.29;NaN
+kethup;300;2018.02.30;NaN
+yoghurt;1;2017.12.01;NaN
+salami;200;2017.12.20;NaN
+Watermelon;1;2017-11-28;NaN
+Ginger;10.0;2017-11-28;NaN
+Curry;4;2017-11-28;NaN
+carrots;1.5;3000-01-01;NaN
+asdf;4;2111-11-11;NaN
+bla1;1.0;2111-11-11;NaN
+qwer;1;2111-11-11;NaN

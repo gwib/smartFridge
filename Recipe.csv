@@ -1,0 +1,5 @@
+Recipe_Name	FoodItems	Description
+Omelette	Egg,2,null:Salami,50.0,null	Description1
+Butter bean & chorizo stew	Chorizo,50.0,null:Beans,100.0,null:Tomatoes,100.0,null	Description2
+Sandwich	Salami,100.0,null:Cheese,20.0,null:Lettuce,10.0,null:Mayonnaise,10.0,null:Kethup,10.0,null	Description3
+Spicy rice	Rice,1,2017-11-28:Ginger,10.0,2017-11-28:Curry,4,2017-11-28:	Steps to cook

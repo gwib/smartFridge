@@ -1,0 +1,21 @@
+//created on: Nov 30, 2017
+package fridgeDrools
+
+//list any import classes here.
+
+
+
+//declare any global variables here
+
+
+rule "Expiration date"
+    when
+        $ourfridge : Fridge();
+        //food : FoodItem()
+        accumulate (FoodItem(s : expirationDate.getTime()) ,  $minimum : min(s))
+        $foods_to_expire: FoodItem( $minimum == expirationDate.getTime())  
+    then
+        $ourfridge.setFood_to_expire($foods_to_expire);
+        
+        
+end
